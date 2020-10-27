@@ -7,3 +7,18 @@ header {
 .banner {
     width: 300px;
 }
+
+.arena {
+    display: flex;
+    justify-content: space-evenly;
+    border: 2px solid black;
+}
+
+.card {
+    text-align: center;
+    border: 2px solid blue;
+}
+
+.poke-name {
+    text-transform: capitalize;
+}
