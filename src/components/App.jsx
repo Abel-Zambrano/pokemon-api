@@ -1,12 +1,12 @@
 import React from 'react';
 import Header from './Header';
-import Pokemon from './Pokemon';
+import Card from './Card';
 
 function App() {
   return (
     <div>
       <Header />
-      <Pokemon />
+      <Card />
     </div>
   );
 }
