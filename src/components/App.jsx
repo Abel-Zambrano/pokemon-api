@@ -1,12 +1,12 @@
 import React from 'react';
 import Header from './Header';
-import BatteArena from './BattleArena';
+import Pokemon from './Pokemon';
 
 function App() {
   return (
     <div>
       <Header />
-      <BatteArena />
+      <Pokemon />
     </div>
   );
 }
