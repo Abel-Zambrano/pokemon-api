@@ -1,35 +1,14 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import React from 'react';
 
-const Card = () => {
-    const [ pokeData, setPokeData ] = useState([]);
-
-    useEffect(() => {
-        axios
-            .get('https://pokeapi.co/api/v2/pokemon/151')
-            .then(res => {
-                setPokeData(res.data);
-            })
-            .catch(err => {
-                console.log(err);
-                
-            })
-    }, []);
-
-console.log(pokeData);
-
-    const pokeType = (pokeData && pokeData.types) && <h5>Type: {pokeData.types[0].type.name}</h5>
-    const pokeHp = (pokeData && pokeData.stats) && <h5>HP: {pokeData.stats[0].base_stat} </h5>
-    const pokeAbility = (pokeData && pokeData.abilities) && <h5>Ability: {pokeData.abilities[0].ability.name} </h5>
-
+const Card = (props) => {
     return (
         <div className="card-container">          
             <div className="card">
-                <h2>{pokeData.species?.name}</h2>
-                <img src={pokeData.sprites?.front_default} alt=""/>
-                {pokeHp}
-                {pokeAbility}
-                {pokeType} 
+                <h2>{props.name}</h2>
+                <img src={props.img} alt=""/>
+                <p>{props.type}</p>
+                <p>{props.health}</p>
+                <p>{props.ability}</p>
             </div>
             <div className='btn-container'>
                 <button className='fetch-btn'>Fetch Card</button> 
