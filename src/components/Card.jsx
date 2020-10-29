@@ -5,13 +5,13 @@ const Card = (props) => {
         <div className="card-container">          
             <div className="card">
                 <h2>{props.name}</h2>
-                <img src={props.img} alt=""/>
-                <p>{props.type}</p>
-                <p>{props.health}</p>
-                <p>{props.ability}</p>
+                <img src={props.img} alt="pokemon"/>
+                <p>Type: {props.type}</p>
+                <p>HP: {props.health}</p>
+                <p>Ability: {props.ability}</p>
             </div>
             <div className='btn-container'>
-                <button className='fetch-btn'>Fetch Card</button> 
+                <button onClick={props.click} className='fetch-btn'>Fetch Card</button> 
             </div>     
         </div>
     )
