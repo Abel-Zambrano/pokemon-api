@@ -7,9 +7,12 @@ import axios from 'axios';
 function App() {
   const [ pokeData, setPokeData ] = useState([]);
 
+  const api = 'https://pokeapi.co/api/v2/pokemon/'
+  const randPoke = Math.floor(Math.random(1) * Math.floor(151))
+
   useEffect(() => {
       axios
-          .get('https://pokeapi.co/api/v2/pokemon/151')
+          .get(api + 151)
           .then(res => {
               setPokeData(res.data);
           })
@@ -17,10 +20,11 @@ function App() {
               console.log(err);
               
           })
-  }, []);
+  }, [pokeData]);
   
   const fetchHandler = () => {
-
+    console.log(randPoke);
+    
   };
 
   return (
