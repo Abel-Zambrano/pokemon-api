@@ -35,6 +35,11 @@ header {
     width: 200px;
 }
 
+.btn-container {
+    display: flex;
+    justify-content: center;
+}
+
 .fetch-btn {
     font-size: medium;
     background-color: rgb(26, 165, 26);
@@ -45,7 +50,7 @@ header {
     padding-bottom: 10px;
     padding-left: 20px;
     padding-right: 20px;
-    margin: auto;
+    margin-top: 2em;
 }
 
 .copyright {

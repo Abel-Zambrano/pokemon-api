@@ -31,7 +31,7 @@ console.log(pokeData);
                 {pokeAbility}
                 {pokeType} 
             </div>
-            <div>
+            <div className='btn-container'>
                 <button className='fetch-btn'>Fetch Card</button> 
             </div>     
         </div>
