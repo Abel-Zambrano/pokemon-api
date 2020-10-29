@@ -23,12 +23,17 @@ console.log(pokeData);
     const pokeAbility = (pokeData && pokeData.abilities) && <h5>Ability: {pokeData.abilities[0].ability.name} </h5>
 
     return (
-        <div className="card">
-            <h1 className="poke-name">{pokeData.species?.name}</h1>
-            <img src={pokeData.sprites?.front_default} alt=""/>
-            {pokeHp}
-            {pokeAbility}
-            {pokeType}
+        <div className="card-container">          
+            <div className="card">
+                <h2>{pokeData.species?.name}</h2>
+                <img src={pokeData.sprites?.front_default} alt=""/>
+                {pokeHp}
+                {pokeAbility}
+                {pokeType} 
+            </div>
+            <div>
+                <button className='fetch-btn'>Fetch Card</button> 
+            </div>     
         </div>
     )
 }

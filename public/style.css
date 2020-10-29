@@ -1,7 +1,19 @@
+html body {
+    margin: 0;
+    font-family: 'Ubuntu', sans-serif;
+    background-color: whitesmoke;
+}
+
 header {
-    display: flex;
-    justify-content: center;
+    display: block;
+    text-align: center;
     background-color: red;
+    color:whitesmoke;
+}
+
+.title {
+    margin-top: 0;
+    padding-bottom: 2rem;
 }
 
 .banner {
@@ -15,10 +27,31 @@ header {
 }
 
 .card {
+    margin: auto;
     text-align: center;
-    border: 2px solid blue;
+    text-transform: capitalize;
+    border: 2px solid gold;
+    border-radius: 8px;
+    width: 200px;
 }
 
-.poke-name {
-    text-transform: capitalize;
+.fetch-btn {
+    font-size: medium;
+    background-color: rgb(26, 165, 26);
+    color: whitesmoke;
+    border-radius: 6px;
+    border: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: auto;
+}
+
+.copyright {
+    margin-top: 18rem;
+    margin-bottom: 2em;
+    text-align: center;
+    color: gray;
+    opacity: 0.5;
 }
