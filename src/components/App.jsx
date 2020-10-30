@@ -7,7 +7,7 @@ import axios from 'axios';
 function App() {
   const [ pokeData, setPokeData ] = useState([]);
   const [ pokeId, setPokeId ] = useState(151);
-  const [ loading, setLoading ] = useState(false);
+  const [ loading, setLoading ] = useState(true);
 
   const api = 'https://pokeapi.co/api/v2/pokemon/'
   
@@ -17,6 +17,7 @@ function App() {
           .get(api + pokeId)
           .then(res => {
               setPokeData(res.data);
+              setLoading(false);
           })
           .catch(err => {
               console.log(err);
@@ -40,15 +41,17 @@ function App() {
   return (
     <div>
       <Header />
+      { loading ? <h5>Loading...</h5> :
       <Card
-        name={pokeData.name}
-        img={pokeData.sprites?.front_default} 
-        type={pokeData.types?.[0].type.name}
-        health={pokeData.stats?.[0].base_stat}
-        ability={pokeData.abilities?.[0].ability.name}
-        click={fetchHandler}
-      />
-      <Footer />
+      name={pokeData.name}
+      img={pokeData.sprites?.front_default} 
+      type={pokeData.types?.[0].type.name}
+      health={pokeData.stats?.[0].base_stat}
+      ability={pokeData.abilities?.[0].ability.name}
+      click={fetchHandler}
+    />
+      }
+    <Footer />
     </div>
   );
 }
