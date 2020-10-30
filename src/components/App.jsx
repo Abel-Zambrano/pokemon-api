@@ -7,6 +7,7 @@ import axios from 'axios';
 function App() {
   const [ pokeData, setPokeData ] = useState([]);
   const [ pokeId, setPokeId ] = useState(151);
+  const [ loading, setLoading ] = useState(false);
 
   const api = 'https://pokeapi.co/api/v2/pokemon/'
   
