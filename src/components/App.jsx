@@ -22,10 +22,14 @@ function App() {
               
           })
   }, [pokeId]);
+
+  const randPoke = ((min , max) => {
+    return Math.floor(Math.random() * (max - min) + min);
+  })
+  
   
   const fetchHandler = () => {
-    const randPoke = Math.floor(Math.random(1) * Math.floor(151))
-    setPokeId(randPoke);
+    setPokeId(randPoke(1, 152));
     
   };
 
